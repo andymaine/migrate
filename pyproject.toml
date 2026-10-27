@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "andymaine-migrate"
+version = "0.1.0"
+description = "比对模型间的语法与指令差异，标出迁移后会失效的部分"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "andymaine" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://andymaine.github.io"
+Repository = "https://github.com/andymaine/migrate"
+Issues = "https://github.com/andymaine/migrate/issues"
+
+[project.scripts]
+migrate = "migrate:main"
+
+[tool.setuptools]
+py-modules = ["migrate"]
